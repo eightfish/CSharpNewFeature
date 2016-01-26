@@ -1,0 +1,6 @@
+c:\users\mlu2\documents\visual studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\bin\Debug\TestCSharpNewFeature.exe.config
+C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\bin\Debug\TestCSharpNewFeature.exe
+C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\bin\Debug\TestCSharpNewFeature.pdb
+C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.csprojResolveAssemblyReference.cache
+C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.exe
+C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.pdb

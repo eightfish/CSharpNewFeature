@@ -1,0 +1,39 @@
+﻿关于C# Version6 Feature的调查, 参考http://blog.jobbole.com/79925/
+
+
+在Vistual Studio Enterprise 2015的测试下， 
+1. 不支持特性Parameterless constructors in structs （无参数的结构体构造函数）
+2. 对于异常筛选器 (Exception filters) 有所改变
+从
+    try
+	{
+		throw new ArgumentNullException("aaa");
+	}
+	catch (ArgumentNullException e) if (e.ParamName == "bbbb")
+	{
+		Console.WriteLine(e.ToString());
+	}
+	catch (Exception ex)
+	{
+		Console.WriteLine("not catch by ArgumentNullException");
+	}
+
+
+	catch (ArgumentNullException e) if (e.ParamName == "bbbb")
+	变化为 catch (ArgumentNullException e) when (e.ParamName == "bbbb")
+
+3. Using静态类 (Using static)
+网上的例子
+using System.Math
+是错误的
+
+应该是
+using static System.Math
+
+4. 字符串嵌入值 (String interpolation)
+public string FullName => "\{FirstName} \{LastName}";
+是错误的
+
+可以使用更加简便的方法
+public string FullName => $"{ FirstName } { LastName }";
+
