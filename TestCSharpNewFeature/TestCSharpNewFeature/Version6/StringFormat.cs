@@ -11,8 +11,6 @@ namespace TestCSharpNewFeature.Version6
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public string FullName => "\{FirstName} \{LastName}";
-
         public override string ToString() => $"This is the first name : { FirstName }, that is the last name: { LastName }";
 
     }

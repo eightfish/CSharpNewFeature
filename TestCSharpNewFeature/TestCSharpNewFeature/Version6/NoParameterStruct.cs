@@ -12,11 +12,12 @@ namespace TestCSharpNewFeature.Version6
 
         public int Age { get; set;  }
 
-        //not support no parameter of struct constructor , it is so weird
-        //    Name = "Michael";
-        //    Age = 33; 
+        //public NoParameterStruct()
+        //{
+            //not support no parameter of struct constructor , it is so weird
+            //Name = "Michael";
+            //Age = 33;
         //}
-
     }
 
 }

@@ -4,3 +4,9 @@ C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSh
 C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.csprojResolveAssemblyReference.cache
 C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.exe
 C:\Users\mlu2\Documents\Visual Studio 2015\Projects\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.pdb
+C:\Users\mlu2\Documents\GitHub\CSharpNewFeature\TestCSharpNewFeature\TestCSharpNewFeature\bin\Debug\TestCSharpNewFeature.exe.config
+C:\Users\mlu2\Documents\GitHub\CSharpNewFeature\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.exe
+C:\Users\mlu2\Documents\GitHub\CSharpNewFeature\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.pdb
+C:\Users\mlu2\Documents\GitHub\CSharpNewFeature\TestCSharpNewFeature\TestCSharpNewFeature\obj\Debug\TestCSharpNewFeature.csprojResolveAssemblyReference.cache
+C:\Users\mlu2\Documents\GitHub\CSharpNewFeature\TestCSharpNewFeature\TestCSharpNewFeature\bin\Debug\TestCSharpNewFeature.exe
+C:\Users\mlu2\Documents\GitHub\CSharpNewFeature\TestCSharpNewFeature\TestCSharpNewFeature\bin\Debug\TestCSharpNewFeature.pdb
