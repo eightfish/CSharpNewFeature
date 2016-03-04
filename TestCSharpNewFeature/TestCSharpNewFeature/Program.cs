@@ -8,19 +8,22 @@ using TestCSharpNewFeature.Version6;
 using static System.Math;
 using static TestCSharpNewFeature.Version6.StaticClass;
 using TestCSharpNewFeature.Version5;
+using System.Diagnostics;
+
 
 namespace TestCSharpNewFeature
 {
     class Program
     {
         /// <summary>
-        /// http://blog.jobbole.com/79925/
+        /// 
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-
             TestNewFeatureOfVersion5();
+
+            //http://blog.jobbole.com/79925/
             //TestNewFeatureOfVersion6();
 
             Console.Read();
@@ -38,7 +41,7 @@ namespace TestCSharpNewFeature
 
         private static void ParallelOperation()
         {
-            int count = 10000;
+            int count = 100;
 
             //all cores to run, CPU occupancy rate will be 100% and the result will not be linear
             Parallel.For(0, count, (i) =>
@@ -51,6 +54,34 @@ namespace TestCSharpNewFeature
             //{
             //    Console.WriteLine(i);
             //}
+
+            Parallel.For<CalculatedResult>(0, count,
+                () => { return new CalculatedResult() { Number = 2 }; },
+                (index, state, result) =>
+                {
+                    //initResult will be changed in each iter
+                    result.Number += 1;
+                    return result;
+                },
+                (i) => { Console.WriteLine(i.Number); });
+
+
+            Parallel.ForEach(new int[] { 1, 2, 3, 4, 5 }, (i) =>
+            {
+                Console.WriteLine("i: {0}, Task: {1}, Thread:  {2}", i, Task.CurrentId, System.Threading.Thread.CurrentThread.ManagedThreadId);
+            });
+
+
+            Parallel.Invoke(() =>
+            {
+                long result = 1;
+                for (int i = 0; i < 32; i++)
+                {
+                    result = result * 2;
+                }
+
+                Console.WriteLine(result);
+            });
         }
 
         private static void AsyncOperation()
