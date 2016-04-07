@@ -21,7 +21,9 @@ namespace TestCSharpNewFeature
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            TestNewFeatureOfVersion5();
+            TestNewFeatureOfVersion4();
+
+            //TestNewFeatureOfVersion5();
 
             //http://blog.jobbole.com/79925/
             //TestNewFeatureOfVersion6();
@@ -29,11 +31,51 @@ namespace TestCSharpNewFeature
             Console.Read();
         }
 
+        private static void TestNewFeatureOfVersion4()
+        {
+            //dynamic item  = new int[] { 1,2,3,4 };
+            //Console.WriteLine(item[1]);
+            
+            TestCovariantAndContravariant();
+        }
+
+        private static void TestCovariantAndContravariant()
+        {
+            Func<object, ArgumentException> function1 = Test;
+            ArgumentException argumentException1 = function1("aaaa");
+
+            Func<string, Exception> function2 = null;
+            //convariant & contravariant
+            //param is object -> string
+            //return value is ArgumentException -> Exception
+            //always use base class
+            function2 = function1;
+            Exception exception2 = function2("bbbb");
+
+            Console.WriteLine(string.Format("argumentException type: {0}, exception type: {1}", argumentException1.GetType(), exception2.GetType()));
+            Console.WriteLine("original");
+
+            function2 = Test2;
+            exception2 = function2("cccc");
+
+            Console.WriteLine(string.Format("argumentException type: {0}, exception type: {1}", argumentException1.GetType(), exception2.GetType()));
+        }
+
+        private static ArgumentException Test(object obj)
+        {
+            return new ArgumentException(obj.ToString());
+        }
+
+        private static Exception Test2(string message)
+        {
+            return new Exception(message);
+        }
+
         #region Version 5
         private static void TestNewFeatureOfVersion5()
         {
             //await/Task async operation
-            //AsyncOperation();
+            AsyncOperation();
 
             //Parallel
             ParallelOperation();
