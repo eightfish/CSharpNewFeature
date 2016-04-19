@@ -10,6 +10,7 @@ using static TestCSharpNewFeature.Version6.StaticClass;
 using TestCSharpNewFeature.Version5;
 using System.Diagnostics;
 using TestCSharpNewFeature.Version4;
+using TestCSharpNewFeature.Version3;
 
 namespace TestCSharpNewFeature
 {
@@ -32,10 +33,26 @@ namespace TestCSharpNewFeature
         #region Version 3
         private static void TestNewFeatureOfVersion3()
         {
-            
+            //TestExtendStaticMethod();
+
+            //TestLambdaExpression();
 
 
         }
+
+        private static void TestDelegate()
+        {
+            LambdaExpressionTester.TestNormalPlan();
+            LambdaExpressionTester.TestAnonymityMethodPlan();
+            LambdaExpressionTester.TestLambdaExpressionPlan();
+        }
+
+        private static void TestExtendStaticMethod()
+        {
+            string content = "a,b,c,d";
+            Console.WriteLine(content.RemoveComma());
+        }
+
         #endregion
 
         #region Version 4

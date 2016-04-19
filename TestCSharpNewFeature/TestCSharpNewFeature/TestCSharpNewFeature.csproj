@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Version3\LambdaExpressionTester.cs" />
+    <Compile Include="Version3\StaticMethodTester.cs" />
+    <Compile Include="Version4\CovariantAndContravariantTester.cs" />
     <Compile Include="Version5\CalculatedResult.cs" />
     <Compile Include="Version6\Resource.cs" />
     <Compile Include="Version6\AutoProperty.cs" />
